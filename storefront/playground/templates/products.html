@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+  <head>
+    <title>Products</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}" />
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <div class="brand">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <span>My Storefront</span>
+        </div>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'products' %}">Products</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Products</h1>
+      <p class="muted">
+        This is a placeholder products page. Replace with your product listings.
+      </p>
+    </main>
+
+    <footer class="container">
+      <div class="footer-inner">
+        <div>&copy; 2024 My Storefront</div>
+        <div class="muted">
+          Built with precision • <span class="kbd">Django</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

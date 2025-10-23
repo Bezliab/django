@@ -2,13 +2,127 @@
 <html>
   <head>
     <title>Home Page</title>
-    <link rel="stylesheet" href="{% static 'styles/home.css' %}" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}?v=2" />
   </head>
   <body>
-    <h1>Home Page</h1>
-    <h2>Home Page, welcome here!!</h2>
-    <footer>
-      <p>&copy; 2024 My Storefront</p>
+    <header class="container">
+      <nav>
+        <div class="brand">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <span>My Storefront</span>
+        </div>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'products' %}">Products</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div>
+          <h1>Welcome to My Storefront</h1>
+          <p class="lead">
+            Quality products, curated with care. Fast shipping and friendly
+            support — everything you need to shop with confidence.
+          </p>
+          <div class="cta-row">
+            <button class="btn">Shop Now</button>
+            <button class="btn ghost">Browse Collections</button>
+          </div>
+
+          <div class="features">
+            <div class="card">
+              <h3>Free Shipping</h3>
+              <p class="muted">
+                Free shipping on orders over $50 to make shopping easier.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Secure Payments</h3>
+              <p class="muted">
+                We use industry standard encryption to protect your data.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Easy Returns</h3>
+              <p class="muted">30-day hassle-free returns on most items.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h3>Today's Picks</h3>
+          <ul class="muted hero-card-list">
+            <li>• Minimalist Desk Lamp</li>
+            <li>• Organic Cotton Tee</li>
+            <li>• Wireless Earbuds</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section>
+        <h2 class="section-title">Featured Products</h2>
+        <div class="products">
+          <article class="product">
+            <div class="placeholder p-bg-1">
+              <img src="{% static 'images/lamp.svg' %}" alt="Minimalist Lamp" />
+            </div>
+            <div class="muted">Minimalist Lamp</div>
+            <div class="price">$49</div>
+          </article>
+          <article class="product">
+            <div class="placeholder p-bg-2">
+              <img src="{% static 'images/tee.svg' %}" alt="Organic Tee" />
+            </div>
+            <div class="muted">Organic Tee</div>
+            <div class="price">$29</div>
+          </article>
+          <article class="product">
+            <div class="placeholder p-bg-3">
+              <img
+                src="{% static 'images/earbuds.svg' %}"
+                alt="Wireless Earbuds"
+              />
+            </div>
+            <div class="muted">Wireless Earbuds</div>
+            <div class="price">$79</div>
+          </article>
+          <article class="product">
+            <div class="placeholder p-bg-4">
+              <img src="{% static 'images/mug.svg' %}" alt="Ceramic Mug" />
+            </div>
+            <div class="muted">Ceramic Mug</div>
+            <div class="price">$15</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonial-section">
+        <h2>What customers say</h2>
+        <div class="testimonial">
+          <img src="" alt="" class="avatar" />
+          <div>
+            <p class="muted">
+              "Fantastic quality and quick delivery. The customer service team
+              was super helpful when I had a question."
+            </p>
+            <div class="testimonial-author">— Aisha</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container">
+      <div class="footer-inner">
+        <div>&copy; 2024 My Storefront</div>
+        <div class="muted">
+          Built with precision • <span class="kbd">Django</span>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

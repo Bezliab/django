@@ -1,0 +1,93 @@
+{% load static %}
+<html>
+  <head>
+    <title>About Page</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'styles/about.css' %}?v=2" />
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <div class="brand">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <span>My Storefront</span>
+        </div>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'products' %}">Products</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>About My Storefront</h1>
+        <p class="lead">
+          We're a small team passionate about well-designed products that make
+          everyday life better. We prioritize sustainability, fair pricing, and
+          a delightful shopping experience.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Our Mission</h2>
+        <p class="muted">
+          To create products that blend form and function, crafted with care and
+          delivered with transparency.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Meet the Team</h2>
+        <div class="team">
+          <div class="member">
+            <div class="member-photo"></div>
+            <div class="member-name">Sam</div>
+            <div class="muted">Founder &amp; Product</div>
+          </div>
+          <div class="member">
+            <div class="member-photo alt1"></div>
+            <div class="member-name">Rina</div>
+            <div class="muted">Operations</div>
+          </div>
+          <div class="member">
+            <div class="member-photo alt2"></div>
+            <div class="member-name">Luis</div>
+            <div class="muted">Customer Support</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Our Story</h2>
+        <p class="muted">
+          Started in 2020 as a weekend project, we grew into a small team
+          focused on products that last. Along the way, we learned to listen,
+          iterate, and always put customers first.
+        </p>
+      </section>
+
+      <section>
+        <div class="section">
+          <h2>Want to work with us?</h2>
+          <p class="muted">
+            We love partnerships and collaboration. Reach out and let’s chat.
+          </p>
+          <div class="cta-row">
+            <button class="btn">Contact Us</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container">
+      <div class="footer-inner">
+        <div>&copy; 2024 My Storefront</div>
+        <div class="muted">
+          Made with care • <span class="kbd">Django</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
